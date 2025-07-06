@@ -1,6 +1,6 @@
-🧠 SkillSculpt: Disleksi Riski Tespiti ve Kişiselleştirilmiş Eğitim Destek Sistemi
+# 🧠 SkillSculpt: Disleksi Riski Tespiti ve Kişiselleştirilmiş Eğitim Destek Sistemi
 
-📌 Information About Team and Product
+## 📌 Information About Team and Product
 
 ### 👥 Team Members
 
