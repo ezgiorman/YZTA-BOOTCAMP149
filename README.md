@@ -9,7 +9,7 @@
 | Ezgi Orman          | Scrum Master  | [LinkedIn](https://www.linkedin.com/in/ezgiorman) |
 | Tuğçe Miray Karaca  | Developer     | [LinkedIn](https://www.linkedin.com/in/tu%C4%9F%C3%A7e-miray-k-9b5a87237/) |
 | Oğuzhan Artan       | Developer     | [LinkedIn](https://www.linkedin.com/in/o%C4%9Fuzhan-artan-b9629626b/) |
-| Dilara Şentürk      | Developer     | [LinkedIn](#) |
+| Dilara Şentürk      | Developer     | [LinkedIn](http://linkedin.com/in/dilara-şentürk-84336521a) |
 
 
 
