@@ -80,6 +80,7 @@ Bu proje, gelecekte **eğitimde önleyici yapay zeka çözümleri** konusunda yo
 
 ### 🧪 Ürün Durumu – Ekran Görüntüleri:
 ![image](https://github.com/user-attachments/assets/49f593e0-25cc-4a15-8577-84e71b8f0a68)
+
 Bu aşamada yapay zeka üretimine odaklanıldığı için web arayüzü basit seviyede bırakıldı, geliştirilecek 
 
 --- 
@@ -122,8 +123,6 @@ Sprint 2’ye kodlamaya doğrudan geçilebilecek temiz bir başlangıç yapabilm
 </details>
 
 ---
-
-<details>
 
 
 
