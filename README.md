@@ -63,3 +63,91 @@ SkillSculpt, hem **eğitimde fırsat eşitliği sağlamak** hem de **gizli öğr
 
 Bu proje, gelecekte **eğitimde önleyici yapay zeka çözümleri** konusunda yol gösterici olmayı hedeflemektedir.
 
+<details>
+  <summary>🚀 Sprint 1</summary>
+
+### 📝 Sprint Notları:
+
+- Proje alanı belirlenip proje fikri oluşturuldu.  
+- Görev dağılımı yapıldı, takım ismi bulundu  
+- Proje ürünü hakkında genel fikirler GitHub’a yazıldı  
+- Toplantılar “Jitsi” veya “Google Meet” üzerinden yapıldı, gerekli durumlarda "Whatsapp" grubu üzerinden konuşmalar devam ettirildi  
+- Proje yönetimi için **Trello** kullanıldı  
+- SkillSculpt için kullanılabilecek veri türleri ve öznitelikler belirlendi (örneğin: okuma süresi, hata tekrarı, harf karıştırma vs.)  
+- Literatürdeki disleksi veri setleri incelendi, simülasyon verisi oluşturma stratejisi geliştirildi  
+- İlk Python betikleriyle simülasyon veri üretimi ve model altyapısı hazırlanmaya başlandı  
+
+---
+
+### 🎯 Sprint için Tamamlanması Beklenen Puan: **80 puan**
+
+---
+
+### 📈 Tahmin Mantığı:
+
+Toplamda 3 sprint olarak planlanan projenin toplam puanı **300** olarak belirlenmiştir.  
+İlk sprint, temel strateji oluşturma ve veri yapısını planlama gibi yüksek bilişsel yük içeren görevleri kapsar.  
+Sprint 2’ye kodlamaya doğrudan geçilebilecek temiz bir başlangıç yapabilmek amacıyla Sprint 1’e **80 puan** hedeflenmiştir.
+
+</details>
+
+---
+
+<details>
+  <summary>💻 Sprint 2</summary>
+
+### 🧠 Sprint Notları:
+
+- Simülasyon veri seti oluşturuldu, model eğitimi için uygun formatta veri hazırlandı  
+- Python ortamında çeşitli makine öğrenmesi algoritmaları test edildi (örneğin: Decision Tree, Random Forest, Logistic Regression)  
+- Performans karşılaştırmaları yapıldı ve ilk model seçildi  
+- Modelin doğruluk, precision, recall gibi metriklerle başarımı değerlendirildi  
+- Disleksi skorlaması için bir değerlendirme şeması geliştirildi (örneğin: %0–40 düşük risk, %40–70 orta risk, %70+ yüksek risk)  
+- Flask ile basit bir REST API oluşturularak modelin dışarıdan veri alabilmesi sağlandı  
+- Arayüz için ilk wireframe çizimleri hazırlandı  
+- Öğretmen/veli kullanıcı rolleri belirlendi ve veri akışı planlandı  
+
+---
+
+### 🎯 Sprint için Tamamlanması Beklenen Puan: **110 puan**
+
+---
+
+### 📈 Tahmin Mantığı:
+
+Sprint 2, projenin **makine öğrenmesi modelleme ve test** sürecine odaklanan teknik fazıdır.  
+Veri hazırlama, model eğitimi, başarı ölçütleri belirleme ve basit API entegrasyonu gibi yazılım becerileri gerektiren işler içerir.  
+Ayrıca bu sprintte arayüz planlaması da başlamıştır. Bu nedenlerle Sprint 2 için hedeflenen puan **110**'dur.
+
+</details>
+
+---
+
+<details>
+  <summary>🖥️ Sprint 3</summary>
+
+### 🎨 Sprint Notları:
+
+- Web tabanlı arayüz geliştirmesine başlanmıştır (HTML/CSS/JS + Flask backend)  
+- Öğrencinin görevleri çözebileceği test ekranı oluşturuldu  
+- Giriş yapan kullanıcının (öğretmen/veli) öğrencinin disleksi risk analizini görebileceği panel geliştirildi  
+- Model tahmin sonuçları, arayüze entegre edilerek canlı olarak gösterildi  
+- LLM tabanlı öneri motoru için test prompt'ları oluşturuldu ve örnek öneri cevapları üretildi  
+- Feedback ekranı geliştirildi: AI destekli "öğrenciye özel geri bildirim" metinleri gösterildi  
+- Uygulamanın genel akışı test edildi, hatalar giderildi  
+- Proje demosu ve sunumu için içerikler hazırlandı  
+
+---
+
+### 🎯 Sprint için Tamamlanması Beklenen Puan: **110 puan**
+
+---
+
+### 📈 Tahmin Mantığı:
+
+Sprint 3, projenin en görünür kısmı olan **arayüz, kullanıcı deneyimi ve son entegrasyon** sürecini kapsamaktadır.  
+Hem teknik karmaşıklık (veri alışverişi, model bağlantısı, kullanıcı etkileşimi), hem de ürün sunumu yönünden efor gerektirdiği için yine **110 puanlık** hedef konmuştur.
+
+</details>
+
+
