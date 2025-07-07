@@ -69,19 +69,49 @@ Bu proje, gelecekte **eğitimde önleyici yapay zeka çözümleri** konusunda yo
 ### 📝 Sprint Notları:
 
 - Proje alanı belirlenip proje fikri oluşturuldu.  
-- Görev dağılımı yapıldı, takım ismi bulundu  
+- Görev dağılımı yapıldı
 - Proje ürünü hakkında genel fikirler GitHub’a yazıldı  
-- Toplantılar “Jitsi” veya “Google Meet” üzerinden yapıldı, gerekli durumlarda "Whatsapp" grubu üzerinden konuşmalar devam ettirildi  
-- Proje yönetimi için **Trello** kullanıldı  
+- Toplantılar  gerekli durumlarda "Whatsapp" grubu üzerinden konuşmalar ile yapıldı
 - SkillSculpt için kullanılabilecek veri türleri ve öznitelikler belirlendi (örneğin: okuma süresi, hata tekrarı, harf karıştırma vs.)  
 - Literatürdeki disleksi veri setleri incelendi, simülasyon verisi oluşturma stratejisi geliştirildi  
 - İlk Python betikleriyle simülasyon veri üretimi ve model altyapısı hazırlanmaya başlandı  
 
 ---
 
+### 🧪 Ürün Durumu – Ekran Görüntüleri:
+![image](https://github.com/user-attachments/assets/49f593e0-25cc-4a15-8577-84e71b8f0a68)
+Bu aşamada yapay zeka üretimine odaklanıldığı için web arayüzü basit seviyede bırakıldı, geliştirilecek 
+
+--- 
+
+### 🔍 Sprint Review:
+- Proje temel fikirleri başarılı bir şekilde netleştirildi.
+- Veri stratejisi oturtuldu.
+- Kodlama için temel Python betikleri hazırlandı.
+- Risk skorlamasına dair ilk kriterler yazıldı.
+- Hedefler başarıyla tamamlandı.
+
+---
+
+### 🔄 Retrospective:
+✅ Neler iyi gitti:
+- Veri yapısı ve proje kapsamı net belirlendi.
+- Takım içi iletişim ve iş bölümü başarılı yürütüldü.
+
+### 🚧 Geliştirilecek alanlar:
+- Daily scrum çıktılarının daha düzenli tutulması.
+- Literatür araştırmalarının daha sistematik toplanması.
+
+### 🎯 Bir sonraki sprintte odak:
+- Makine öğrenmesi modeli oluşturulacak ve eğitilecektir.
+  
+---
+
 ### 🎯 Sprint için Tamamlanması Beklenen Puan: **80 puan**
 
 ---
+
+
 
 ### 📈 Tahmin Mantığı:
 
