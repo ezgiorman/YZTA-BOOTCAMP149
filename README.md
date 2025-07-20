@@ -124,10 +124,6 @@ Sprint 2’ye kodlamaya doğrudan geçilebilecek temiz bir başlangıç yapabilm
 
 ---
 
-<details>
-  <summary>🎯 Sprint 2</summary>
-
-<br>
 
 <details>
   <summary>🎯 Sprint 2</summary>
