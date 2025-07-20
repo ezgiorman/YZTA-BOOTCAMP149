@@ -124,5 +124,58 @@ Sprint 2’ye kodlamaya doğrudan geçilebilecek temiz bir başlangıç yapabilm
 
 ---
 
+<details>
+  <summary>🎯 Sprint 2</summary>
+
+<br>
+
+<details>
+  <summary>🎯 Sprint 2</summary>
+
+<br>
+
+### 🧪 Ürün Durumu – Ekran Görüntüleri:
+<img width="945" height="453" alt="image" src="https://github.com/user-attachments/assets/6897ea52-90d0-4d13-b3ca-7586295d2811" />
+<img width="945" height="456" alt="image" src="https://github.com/user-attachments/assets/cfdc2ba3-c1d8-459e-a509-e69f6a83137b" />
+<img width="945" height="455" alt="image" src="https://github.com/user-attachments/assets/64032430-cf6a-4411-aa3b-4ba38452da75" />
+<img width="945" height="455" alt="image" src="https://github.com/user-attachments/assets/3d10e604-ac98-47ab-9e5c-19cedeb9d432" />
+---
+
+
+### 🔍 Sprint Review:
+- Sprint 1’de başlanan sayfalar tamamlanarak tasarımsal bütünlük sağlandı.
+- React Router ile sayfa yönlendirmeleri başarıyla kuruldu.
+- Mock veri entegrasyonu ile analiz ekranı işlevsel hale getirildi.
+- Form giriş alanlarında doğrulama eklendi.
+- Temel kullanıcı deneyimi adımları tamamlandı.
+
+---
+
+### 🔄 Retrospective:
+✅ Neler iyi gitti:
+- Sayfa geçişleri, buton işlevleri ve form yapıları sorunsuz tasarlandı.
+- Makine öğrenmesi modeli büyük ölçüde eğitildi.
+- Takım, belirlenen ekran hedeflerini zamanında tamamladı.
+
+🚧 Geliştirilecek alanlar:
+- Tasarım uyumunun sürdürülmesi için component yapılarının tekrar gözden geçirilmesi gerekebilir.  
+- Mock veriden gerçek veriye geçiş için altyapı hazırlıkları bir sonraki sprintte daha net planlanmalı.
+- Yapay zeka modeli geliştirilmeli.
+
+---
+
+### 🎯 Bir sonraki sprintte odak:
+- Flask API’ye canlı veri gönderimi yapılacak.  
+- Gerçek model ile analiz çıktısı alınacak.  
+- Doğal dilde öneri üretimi (LLM tabanlı veya kural tabanlı) başlatılacak.
+
+---
+
+### ✅ Sprint için Tamamlanması Beklenen Puan: **80 puan**
+
+</details>
+
+
+
 
 
