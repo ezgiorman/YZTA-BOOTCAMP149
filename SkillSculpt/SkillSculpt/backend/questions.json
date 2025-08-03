@@ -1,0 +1,243 @@
+[
+  {
+    "question": "Güneş hangi gezegene en yakındır?",
+    "options": ["Merkür", "Venüs", "Dünya", "Mars"],
+    "answer": "Merkür"
+  },
+  {
+    "question": "Türkiye'nin başkenti neresidir?",
+    "options": ["İstanbul", "Ankara", "İzmir", "Bursa"],
+    "answer": "Ankara"
+  },
+  {
+    "question": "Hangi kelime diğerlerinden farklıdır?",
+    "options": ["Kalem", "Defter", "Silgi", "Karpuz"],
+    "answer": "Karpuz"
+  },
+  {
+    "question": "5 + 3 işleminin sonucu kaçtır?",
+    "options": ["6", "7", "8", "9"],
+    "answer": "8"
+  },
+  {
+    "question": "Aşağıdaki hayvanlardan hangisi uçamaz?",
+    "options": ["Kartal", "Kelebek", "Güvercin", "Kedi"],
+    "answer": "Kedi"
+  },
+  {
+    "question": "Hangisi bir taşıttır?",
+    "options": ["Araba", "Karpuz", "Kalem", "Yastık"],
+    "answer": "Araba"
+  },
+  {
+    "question": "Pazartesi gününden sonra hangi gün gelir?",
+    "options": ["Salı", "Çarşamba", "Perşembe", "Cuma"],
+    "answer": "Salı"
+  },
+  {
+    "question": "\"Kuş\" kelimesi kaç harflidir?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "3"
+  },
+  {
+    "question": "Hangisi çift sayıdır?",
+    "options": ["3", "5", "6", "7"],
+    "answer": "6"
+  },
+  {
+    "question": "Resim yapmak için hangisi kullanılır?",
+    "options": ["Kalem", "Silgi", "Cetvel", "Fırça"],
+    "answer": "Fırça"
+  },
+  {
+    "question": "Gözlük ne için kullanılır?",
+    "options": ["Yazmak", "Görmek", "Koşmak", "Duymak"],
+    "answer": "Görmek"
+  },
+  {
+    "question": "Elma bir meyvedir. Aşağıdakilerden hangisi de meyvedir?",
+    "options": ["Armut", "Havuç", "Patates", "Soğan"],
+    "answer": "Armut"
+  },
+  {
+    "question": "Süt hangi hayvandan elde edilir?",
+    "options": ["Koyun", "Kedi", "Tavuk", "Balık"],
+    "answer": "Koyun"
+  },
+  {
+    "question": "Hangisi bir renk değildir?",
+    "options": ["Mavi", "Sarı", "Kırmızı", "Kedi"],
+    "answer": "Kedi"
+  },
+  {
+    "question": "2, 4, 6, 8, ? Dizisinde soru işareti yerine ne gelmelidir?",
+    "options": ["9", "10", "12", "11"],
+    "answer": "10"
+  },
+  {
+    "question": "\"Köpek\" kelimesi kaç harften oluşur?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5"
+  },
+  {
+    "question": "Hangisi sabah kahvaltısında yenir?",
+    "options": ["Peynir", "Çorap", "Silgi", "Makas"],
+    "answer": "Peynir"
+  },
+  {
+    "question": "Saat 12:00 ne zaman olur?",
+    "options": ["Öğlen", "Sabah", "Akşam", "Gece"],
+    "answer": "Öğlen"
+  },
+  {
+    "question": "Aşağıdaki kelimelerden hangisi diğerlerinden uzundur?",
+    "options": ["Kuş", "Kedi", "Balık", "Timsah"],
+    "answer": "Timsah"
+  },
+  {
+    "question": "Bir haftada kaç gün vardır?",
+    "options": ["5", "6", "7", "8"],
+    "answer": "7"
+  },
+
+  {
+    "question": "Hangisi yaz mevsimine ait bir etkinliktir?",
+    "options": ["Kardan adam yapmak", "Denize girmek", "Battaniyeye sarılmak", "Sobayı yakmak"],
+    "answer": "Denize girmek"
+  },
+  {
+    "question": "Hangisi bir sayı değildir?",
+    "options": ["3", "On", "Kırmızı", "2"],
+    "answer": "Kırmızı"
+  },
+  {
+    "question": "\"Elma\" kelimesiyle aynı harfle başlayan hangisidir?",
+    "options": ["Araba", "Uçak", "Lamba", "Balık"],
+    "answer": "Araba"
+  },
+  {
+    "question": "Hangi hayvan suda yaşar?",
+    "options": ["Aslan", "Balık", "Fare", "Tavuk"],
+    "answer": "Balık"
+  },
+  {
+    "question": "2 + 2 = ?",
+    "options": ["3", "4", "5", "6"],
+    "answer": "4"
+  },
+  {
+    "question": "“Kalem, defter, silgi” kelimeleri hangi gruptadır?",
+    "options": ["Oyuncak", "Okul eşyası", "Meyve", "Hayvan"],
+    "answer": "Okul eşyası"
+  },
+  {
+    "question": "Dün bugünün hangi günüdür?",
+    "options": ["Yarını", "Geçmişi", "Sonrası", "Başlangıcı"],
+    "answer": "Geçmişi"
+  },
+  {
+    "question": "Gece ne yapılır?",
+    "options": ["Yüzülür", "Uyunur", "Top oynanır", "Uçurtma uçurulur"],
+    "answer": "Uyunur"
+  },
+  {
+    "question": "Kış mevsiminde hangisi olur?",
+    "options": ["Kar yağar", "Denize girilir", "Meyve toplanır", "Güneşlenilir"],
+    "answer": "Kar yağar"
+  },
+  {
+    "question": "Sınıfta ne yapılır?",
+    "options": ["Oyun oynanır", "Film izlenir", "Ders çalışılır", "Yüzülür"],
+    "answer": "Ders çalışılır"
+  },
+  {
+    "question": "Sabah kahvaltısından sonra ne yapılır?",
+    "options": ["Uyunur", "Akşam yemeği yenir", "Okula gidilir", "Dondurma yenir"],
+    "answer": "Okula gidilir"
+  },
+  {
+    "question": "Hangisi canlıdır?",
+    "options": ["Ağaç", "Masa", "Kitap", "Taş"],
+    "answer": "Ağaç"
+  },
+  {
+    "question": "Aşağıdaki hayvanlardan hangisi uçamaz?",
+    "options": ["Kartal", "Kelebek", "Yarasa", "Kaplumbağa"],
+    "answer": "Kaplumbağa"
+  },
+  {
+    "question": "Kışın dışarı çıkarken ne giyilir?",
+    "options": ["Mont", "Mayo", "Şort", "Gömlek"],
+    "answer": "Mont"
+  },
+  {
+    "question": "Akşam yemeği hangi saatlerde yenir?",
+    "options": ["06:00", "12:00", "19:00", "09:00"],
+    "answer": "19:00"
+  },
+  {
+    "question": "Ters yazılmış kelime hangisidir?",
+    "options": ["amle", "elma", "mela", "meal"],
+    "answer": "amle"
+  },
+  {
+    "question": "Hangisi 'b' harfiyle başlar?",
+    "options": ["Balık", "Elma", "Karpuz", "Araba"],
+    "answer": "Balık"
+  },
+  {
+    "question": "Aşağıdaki kelimelerden hangisi bir hayvandır?",
+    "options": ["Kedi", "Kalem", "Karpuz", "Kazak"],
+    "answer": "Kedi"
+  },
+  {
+    "question": "3 harfli kelime hangisidir?",
+    "options": ["Elma", "Bal", "Karpuz", "Okul"],
+    "answer": "Bal"
+  },
+  {
+    "question": "Aşağıdakilerden hangisi okulda kullanılmaz?",
+    "options": ["Kalem", "Defter", "Silgi", "Tava"],
+    "answer": "Tava"
+  },
+  {
+    "question": "Hangi kelime yanlış yazılmıştır?",
+    "options": ["okul", "kalem", "yaz", "mevye"],
+    "answer": "mevye"
+  },
+  {
+    "question": "Hangi kelimenin içinde 'ç' harfi vardır?",
+    "options": ["Çilek", "Muz", "Karpuz", "Üzüm"],
+    "answer": "Çilek"
+  },
+  {
+    "question": "Aşağıdaki kelimelerden hangisi sessiz harf ile başlar?",
+    "options": ["Elma", "Ayı", "Kuş", "İnek"],
+    "answer": "Kuş"
+  },
+  {
+    "question": "Hangisi bir mevsim değildir?",
+    "options": ["Yaz", "Kış", "Gece", "Sonbahar"],
+    "answer": "Gece"
+  },
+  {
+    "question": "Aşağıdaki kelimelerden hangisi bir nesne değildir?",
+    "options": ["Kalem", "Defter", "Kitap", "Düşünce"],
+    "answer": "Düşünce"
+  },
+  {
+    "question": "Hangisi en uzun kelimedir?",
+    "options": ["Ev", "Okul", "Merdiven", "El"],
+    "answer": "Merdiven"
+  },
+  {
+    "question": "Hangisi sabit durmaz?",
+    "options": ["Duvar", "Saat", "Sandalye", "Kapı"],
+    "answer": "Saat"
+  },
+  {
+    "question": "Hangisi doğru bir eşlemedir?",
+    "options": ["Araba - Uçar", "Balık - Uçar", "Kuş - Uçar", "İnek - Yüzer"],
+    "answer": "Kuş - Uçar"
+  }
+]

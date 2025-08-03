@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>📘 Test Sayfası | SkillSculpt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Varela Round', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      padding: 30px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #002244;
+    }
+
+    .question-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .question-box h3 {
+      margin: 0 0 10px;
+    }
+
+    .options label {
+      display: block;
+      margin: 8px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .options label:hover {
+      background: #f0f0f0;
+    }
+
+    .submit-btn {
+      background: #002244;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      display: block;
+      margin: 30px auto 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>📘 Test Soruları</h1>
+  <form id="quizForm">
+    <div id="quiz-container"></div>
+    <button type="submit" class="submit-btn">✅ Gönder</button>
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("/quiz-questions")
+        .then(res => res.json())
+        .then(questions => {
+          const container = document.getElementById("quiz-container");
+          container.innerHTML = "";
+
+          questions.forEach((q, i) => {
+            const div = document.createElement("div");
+            div.classList.add("question-box");
+
+            div.innerHTML = `
+              <h3>${i + 1}. ${q.question}</h3>
+              <div class="options">
+                ${q.options.map(opt => `
+                  <label><input type="radio" name="q${i}" value="${opt}" required> ${opt}</label>
+                `).join("")}
+              </div>
+            `;
+
+            container.appendChild(div);
+          });
+        });
+
+      document.getElementById("quizForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Cevaplar alındı. Model entegrasyonuna hazır!");
+      });
+    });
+  </script>
+</body>
+</html>

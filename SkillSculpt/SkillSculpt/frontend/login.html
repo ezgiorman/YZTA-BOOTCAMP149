@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>SkillSculpt | Giriş Yap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #005AA7, #FFFDE4);
+      font-family: 'Varela Round', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      width: 400px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 2rem;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 8px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px;
+      background-color: #002244;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004080;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .success {
+      color: green;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: #004080;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>🔐 Giriş Yap</h1>
+
+    {% if message %}
+      <p class="{{ 'error' if '❌' in message else 'success' }}">{{ message }}</p>
+    {% endif %}
+
+    <form action="/submit-login" method="post">
+      <label for="email">📧 E-posta:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">🔒 Şifre:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Giriş Yap ✅</button>
+    </form>
+
+    <a href="/register" class="back-link">📋 Hesabınız yok mu? Kayıt olun</a>
+    <a href="/" class="back-link">🏠 Ana Sayfa</a>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <title>SkillSculpt | Öğrenci Kaydı</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Varela Round', sans-serif;
+    }
+
+    body {
+      background: url('/frontend/images/background.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: 0;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .circle.blue { background-color: #00bcd4; width: 120px; height: 120px; top: 10%; left: 5%; }
+    .circle.green { background-color: #8bc34a; width: 180px; height: 180px; bottom: 15%; right: 8%; }
+    .circle.purple { background-color: #b39ddb; width: 90px; height: 90px; top: 50%; right: 15%; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-40px); }
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.90);
+      padding: 40px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 600px;
+      color: #333;
+      z-index: 1;
+    }
+
+    h1 {
+      text-align: center;
+      color: #002244;
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 8px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      background-color: #002244;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #004080;
+      transform: scale(1.05);
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: #004080;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .error-message {
+      text-align: center;
+      color: crimson;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Daireler -->
+  <div class="circle blue"></div>
+  <div class="circle green"></div>
+  <div class="circle purple"></div>
+
+  <div class="form-container">
+    <h1>📋 Öğrenci Kayıt Formu</h1>
+
+    <!-- ⚠️ Mesaj varsa ekrana bas -->
+    {% if message %}
+      <div class="error-message">{{ message }}</div>
+    {% endif %}
+
+    <form action="/submit-registration" method="post">
+      <label for="name">👤 Ad Soyad:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">📧 E-posta:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">🔒 Şifre:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="age">🎂 Yaş:</label>
+      <input type="number" id="age" name="age" min="5" max="100" required>
+
+      <label for="gender">⚧️ Cinsiyet:</label>
+      <select id="gender" name="gender" required>
+        <option value="">Seçiniz</option>
+        <option value="female">Kız</option>
+        <option value="male">Erkek</option>
+        <option value="other">Diğer</option>
+      </select>
+
+      <button type="submit">Kaydı Tamamla ✅</button>
+    </form>
+
+    <a href="/login" class="back-link">🔐 Zaten kayıtlı mısın? Giriş Yap</a>
+  </div>
+</body>
+</html>

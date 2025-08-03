@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <title>SkillSculpt | Ana Sayfa</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Varela Round', sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: url('/frontend/images/background.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 80px 20px 40px 20px;
+      color: #fff;
+      position: relative;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: 0;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .circle.blue { background-color: #00bcd4; width: 120px; height: 120px; top: 10%; left: 5%; }
+    .circle.green { background-color: #8bc34a; width: 180px; height: 180px; bottom: 15%; right: 8%; }
+    .circle.purple { background-color: #b39ddb; width: 90px; height: 90px; top: 50%; right: 15%; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-40px); }
+    }
+
+    h1 {
+      font-size: 3.7rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 2px 2px 6px #333;
+      z-index: 1;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .description {
+      font-size: 1.5rem;
+      max-width: 750px;
+      margin-bottom: 40px;
+      color: #f0f0f0;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      animation: fadeIn 1.4s ease forwards;
+      text-align: center;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      z-index: 1;
+      animation: fadeIn 1.8s ease forwards;
+    }
+
+    .nav-button {
+      padding: 16px 30px;
+      font-size: 16px;
+      background-color: #002244;
+      color: #fff;
+      border: none;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: bold;
+      min-width: 180px;
+      text-align: center;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .nav-button:hover {
+      background-color: #fff;
+      transform: scale(1.08);
+      color: #002244;
+    }
+
+    @media (max-width: 600px) {
+      .button-group {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .description {
+        font-size: 1.1rem;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="circle blue"></div>
+  <div class="circle green"></div>
+  <div class="circle purple"></div>
+
+  <h1>🎓 SkillSculpt'e Hoş Geldiniz</h1>
+  <p class="description">
+    Bu sistem, öğrencilerin görev çözme davranışlarını analiz ederek disleksi riski taşıyıp taşımadıklarını belirlemeye yardımcı olur.
+  </p>
+
+  <div class="button-group">
+    <a href="/register" class="nav-button">📋 Öğrenci Kaydı</a>
+    <a href="/task" class="nav-button">🧠 Görev Çöz</a>
+    <a href="/submit" class="nav-button">📨 Cevap Gönder</a>
+    <a href="/analyze" class="nav-button">📊 Analizi Görüntüle</a>
+  </div>
+
+</body>
+</html>

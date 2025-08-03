@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Ezgi Orman",
+    "email": "ezgiorman10@gmail.com",
+    "password": "$2b$12$p9/V/LA492OtRImrtBiN9edSzLccSIT9HoYuE05xExQcPJG/9gw4y",
+    "age": 10,
+    "gender": "female"
+  },
+  {
+    "name": "melih eren",
+    "email": "meliheren2834@gmail.com",
+    "password": "$2b$12$E9mUG5JFqPpooFpPXFrT2eALVsUWmqBGgZvrVa2LK3/aVx67aeUT6",
+    "age": 12,
+    "gender": "male"
+  }
+]

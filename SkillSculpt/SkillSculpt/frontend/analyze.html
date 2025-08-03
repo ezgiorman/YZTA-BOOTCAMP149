@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <title>SkillSculpt | Analiz Paneli</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Varela Round', sans-serif;
+    }
+
+    body {
+      background: url('/frontend/images/background.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+    
+    /* Renkli daireler */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: 0;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .circle.blue { background-color: #00bcd4; width: 120px; height: 120px; top: 10%; left: 5%; }
+    .circle.green { background-color: #8bc34a; width: 180px; height: 180px; bottom: 15%; right: 8%; }
+    .circle.purple { background-color: #b39ddb; width: 90px; height: 90px; top: 50%; right: 15%; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-40px); }
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 600px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      font-size: 2.6rem;
+      margin-bottom: 25px;
+      text-shadow: 1px 1px 8px #444;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      background-color: #002244;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #004080;
+      transform: scale(1.05);
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: #004080;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .result-box {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: #f0f4f8;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .result-box h3 {
+      margin-top: 0;
+      color: #004080;
+    }
+
+    .suggestion-box {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: #e0f7fa;
+      color: #004d40;
+    }
+
+    .suggestion-box h4 {
+      margin-top: 0;
+      color: #00796b;
+    }
+  </style>
+</head>
+<body>
+     <!-- Daireler -->
+    <div class="circle blue"></div>
+    <div class="circle green"></div>
+    <div class="circle purple"></div>
+    <div class="form-container">
+    <h1>📊 Öğrenci Analizi</h1>
+    <form action="/analyze-result" method="post">
+      <label for="student-name">👤 Öğrenci Adı:</label>
+      <input type="text" id="student-name" name="student-name" required>
+
+      <label for="task-date">📅 Görev Tarihi:</label>
+      <input type="date" id="task-date" name="task-date" required>
+
+      <button type="submit">Analiz Et ✅</button>
+    </form>
+
+    <!-- Bu kutular isteğe göre dinamik de yapılabilir -->
+    <div class="result-box">
+      <h3>📈 Risk Skoru: %76</h3>
+      <p>Harf karıştırma: 3 kez</p>
+      <p>Ortalama okuma süresi: 42 saniye</p>
+      <p>Yanlış cevap sayısı: 2</p>
+    </div>
+
+    <div class="suggestion-box">
+      <h4>🧩 Öneri</h4>
+      <p>Öğrenciye görsel destekli materyaller sunulmalı. Harf ayrıştırma ve dikkat artırıcı kısa egzersizler önerilir.</p>
+    </div>
+
+    <a href="index.html" class="back-link">🏠 Ana Sayfaya Dön</a>
+  </div>
+</body>
+</html>
