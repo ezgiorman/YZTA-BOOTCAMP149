@@ -26,7 +26,7 @@
       <h2>📖 Okuma Paragrafı</h2>
       <p>Aşağıdaki paragrafı okumak için "Başla" butonuna basın. Bitirdiğinizde "Bitirdim" butonuna basın:</p>
       <div id="reading-paragraph">
-        Bilim, insanlığın bilgiye ulaşma yolculuğunda temel bir araçtır. Gözlem, deney ve akıl yürütme ile dünyayı anlama çabasını temsil eder.
+        Ali sabah erkenden uyandı. Gözlerini ovuşturdu ve pencereye koştu. Hava bulutluydu ama yağmur yağmıyordu. Bugün okulda sunumu vardı. Heyecanlıydı çünkü çok çalışmıştı. Kahvaltıda annesi ona yumurta ve peynir hazırladı. Ali yemeğini bitirdi, dişlerini fırçaladı ve çantasını alarak kapıya yöneldi. Okula vardığında öğretmeni onu gülümseyerek karşıladı. Sırası geldiğinde tahtaya çıktı ve konuşmaya başladı. Önce sesi titredi, ama sonra kendine güveni geldi. Sunumunu bitirdiğinde arkadaşları onu alkışladı.
       </div>
       <div class="timer-buttons">
         <span id="timer-display">0s</span>
@@ -139,11 +139,9 @@
         const taskCompletionTime = Math.round((formEndTime - pageStartTime) / 1000);
         const readingTime = Math.round((readingEndTime - readingStartTime) / 1000);
         
-        
         const correctOrder = "ADKLR"; 
         const userAnswerOrder = (formData.get("letter_order") || "").replace(/[\s,.-]/g, "").toUpperCase();
         const sequencingMistake = userAnswerOrder === correctOrder ? 0 : 1;
-        
         
         let totalSemanticMistakes = 0;
         if (formData.get("quiz_answer") !== "24") {

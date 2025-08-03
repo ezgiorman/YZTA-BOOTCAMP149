@@ -32,9 +32,8 @@
 
       <div class="result-box">
         <h3>📈 Risk Skoru: <span id="risk-score">...</span></h3>
-        <p>Sıralama hatası: <span id="sequencing-mistakes">...</span> kez</p>
-        <p>Ortalama okuma süresi: <span id="reading-time">...</span> saniye</p>
-        <p>Anlamsal hata sayısı: <span id="semantic-mistakes">...</span></p>
+        <p>Okuma Süresi: <span id="reading-time">...</span> saniye (Beklenen: <span id="expected-reading-time">...</span> saniye)</p>
+        <p>Test Hataları: <span id="semantic-mistakes">...</span> adet</p>
       </div>
 
       <div class="suggestion-box">
@@ -52,15 +51,21 @@
 
         if (results) {
           document.getElementById('risk-score').textContent = `%${results.risk_score}`;
-          document.getElementById('sequencing-mistakes').textContent = results.sequencing_mistakes;
           document.getElementById('reading-time').textContent = results.reading_time;
+          document.getElementById('expected-reading-time').textContent = results.expected_reading_time;
           document.getElementById('semantic-mistakes').textContent = results.semantic_mistakes;
           
-          if (results.prediction === 1) {
-            suggestionTextEl.textContent = "Öğrencinin dikkat ve sıralama becerilerini geliştirmek için görsel destekli materyaller ve harf ayrıştırma egzersizleri önerilir. Okuma hızını artırmak için sesli okuma çalışmaları faydalı olabilir.";
+          
+          const score = results.risk_score;
+          if (score >= 70) {
+            suggestionTextEl.textContent = "Yüksek risk gözlemlendi. Özellikle okuma hızı ve sıralama becerilerinde zorluklar mevcut. Sesli okuma egzersizleri ve heceleme oyunları gibi daha yoğunlaştırılmış çalışmalar önerilir. Bir uzmandan destek alınması faydalı olabilir.";
+          } else if (score >= 40) {
+            suggestionTextEl.textContent = "Orta düzeyde risk tespit edildi. Öğrencinin dikkat ve sıralama becerilerini geliştirmek için görsel destekli materyaller (renkli kartlar, resimli hikayeler) ve harf ayrıştırma egzersizleri faydalı olacaktır.";
           } else {
-            suggestionTextEl.textContent = "Öğrencinin görev performansı genel olarak beklentiler dahilindedir. Belirgin bir risk gözlemlenmemiştir. Öğrencinin motivasyonunu yüksek tutmak için olumlu geri bildirim önemlidir.";
+            suggestionTextEl.textContent = "Düşük risk seviyesi. Öğrencinin görev performansı genel olarak beklentiler dahilindedir. Öğrencinin motivasyonunu yüksek tutmak ve okuma alışkanlığını teşvik etmek için olumlu geri bildirim önemlidir.";
           }
+          
+
         } else {
           document.querySelector('.form-container').innerHTML = '<h1>Analiz sonucu bulunamadı.</h1><a href="/task" class="back-link">🧠 Görevleri Çözmeye Geri Dön</a>';
         }

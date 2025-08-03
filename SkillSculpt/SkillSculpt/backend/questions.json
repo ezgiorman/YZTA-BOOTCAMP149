@@ -1,252 +1,252 @@
 [
   {
-    "question": "Hangi kelime 'taş' ile uyaklıdır (kafiye)?",
-    "options": ["kuş", "kaş", "top", "dal"],
-    "answer": "kaş"
+    "question": "'kaz' kelimesi ile hangi kelime kafiyelidir?",
+    "options": ["yaz", "göl", "top", "ip"],
+    "answer": "yaz"
   },
   {
-    "question": "Görseldeki bir 'bardak'. Hangi kelime doğrudur?",
-    "options": ["bardak", "darpak", "barbak", "dardak"],
-    "answer": "bardak"
+    "question": "'b' harfinin ayna görüntüsü hangisidir?",
+    "options": ["d", "p", "q", "g"],
+    "answer": "d"
   },
   {
-    "question": "Hangisi 'ev' kelimesinin tersten okunuşudur?",
-    "options": ["ve", "el", "es", "er"],
-    "answer": "ve"
+    "question": "'araba' kelimesi kaç heceden oluşur?",
+    "options": ["2", "3", "4", "1"],
+    "answer": "3"
   },
   {
-    "question": "Hangi kelime 'm' sesiyle başlar?",
-    "options": ["nar", "kedi", "masa", "at"],
-    "answer": "masa"
+    "question": "'kedi' kelimesinin sonundaki ses hangisidir?",
+    "options": ["k", "e", "d", "i"],
+    "answer": "i"
   },
   {
-    "question": "Alfabede 'D' harfinden hemen sonra hangi harf gelir?",
-    "options": ["C", "E", "B", "F"],
-    "answer": "E"
+    "question": "Hangi kelime doğru yazılmıştır?",
+    "options": ["tren", "pilan", "kral", "spor"],
+    "answer": "pilan"
   },
   {
-    "question": "Sayıları sayarken 6'dan önce ne söyleriz?",
-    "options": ["7", "4", "5", "8"],
-    "answer": "5"
-  },
-  {
-    "question": "Hangi kelime yanlış yazılmıştır?",
-    "options": ["kitap", "defter", "kalem", "mekal"],
-    "answer": "mekal"
-  },
-  {
-    "question": "Hangisi bir hayvan olan 'kurt' kelimesidir?",
-    "options": ["kurt", "kart", "kırt", "truk"],
-    "answer": "kurt"
-  },
-  {
-    "question": "'Çilek' kelimesinin son sesi hangisidir?",
-    "options": ["ç", "i", "k", "l"],
-    "answer": "k"
-  },
-  {
-    "question": "Pazartesi, Salı, ..., Perşembe. Boşluğa ne gelmelidir?",
-    "options": ["Cuma", "Pazar", "Çarşamba", "Cumartesi"],
-    "answer": "Çarşamba"
-  },
-  {
-    "question": "Hangisi 'top' kelimesidir?",
-    "options": ["top", "pot", "tok", "dop"],
-    "answer": "top"
-  },
-  {
-    "question": "'sol' kelimesinin zıt anlamlısı nedir?",
-    "options": ["sağ", "los", "bol", "yol"],
-    "answer": "sağ"
+    "question": "'ot' kelimesinin başına 'n' sesi eklersen ne olur?",
+    "options": ["ton", "tok", "not", "net"],
+    "answer": "not"
   },
   {
     "question": "Aşağıdaki harflerden hangisi diğerlerinden farklıdır?",
-    "options": ["b", "d", "p", "a"],
-    "answer": "a"
+    "options": ["m", "w", "n", "b"],
+    "answer": "w"
   },
   {
-    "question": "Eğer 'para' kelimesinin başındaki 'p' sesini atarsak ne kalır?",
-    "options": ["ara", "arp", "par", "rap"],
-    "answer": "ara"
+    "question": "'para' kelimesindeki sesli harfler hangileridir?",
+    "options": ["p, r", "a, a", "p, a", "r, a"],
+    "answer": "a, a"
   },
   {
-    "question": "Hangi kelime doğru yazılmıştır?",
-    "options": ["tren", "tiren", "tenr", "tern"],
-    "answer": "tren"
+    "question": "Hangi kelime 'göz' kelimesi ile kafiyeli değildir?",
+    "options": ["söz", "köz", "toz", "tuz"],
+    "answer": "tuz"
   },
   {
-    "question": "Sıralamayı tamamla: 10, 20, 30, ?, 50",
-    "options": ["35", "60", "40", "25"],
-    "answer": "40"
+    "question": "Türkiye'nin başkenti neresidir?",
+    "options": ["İstanbul", "Ankara", "İzmir", "Bursa"],
+    "answer": "Ankara"
   },
   {
-    "question": "Hangi kelime 'göz' ile uyaklı değildir?",
-    "options": ["söz", "köz", "yüz", "el"],
-    "answer": "el"
+    "question": "'bardak' kelimesinin ortasındaki hece hangisidir?",
+    "options": ["bar", "da", "dak", "ard"],
+    "answer": "da"
   },
   {
-    "question": "Hangisi '31' sayısıdır?",
-    "options": ["13", "31", "33", "11"],
-    "answer": "31"
+    "question": "Hangi hayvan uçamaz?",
+    "options": ["yarasa", "penguen", "martı", "kartal"],
+    "answer": "penguen"
   },
   {
-    "question": "'m' ve 'n' harflerinden hangisi 'limon' kelimesinde vardır?",
-    "options": ["m", "n", "ikisi de", "hiçbiri"],
-    "answer": "ikisi de"
+    "question": "'sal' kelimesinin sonuna 'k' sesi eklersen ne olur?",
+    "options": ["salk", "sak", "salak", "salkı"],
+    "answer": "salk"
   },
   {
-    "question": "'Önce ellerimi yıkarım, ... yemeğimi yerim.' Boşluğa ne gelmeli?",
-    "options": ["sonra", "önce", "çünkü", "ama"],
-    "answer": "sonra"
+    "question": "Hangisi bir sayı değildir?",
+    "options": ["üç", "beş", "altı", "sarı"],
+    "answer": "sarı"
   },
   {
-    "question": "Hangisi 'aslan' kelimesidir?",
-    "options": ["aslan", "alsan", "ansal", "salan"],
-    "answer": "aslan"
+    "question": "Ters yazılmış kelime hangisidir?",
+    "options": ["akit", "kita", "kati", "atik"],
+    "answer": "akit"
   },
   {
-    "question": "'kapı' kelimesinin ilk sesi nedir?",
-    "options": ["p", "ı", "k", "a"],
-    "answer": "k"
+    "question": "'çilek' kelimesi hangi ses ile başlar?",
+    "options": ["ç", "i", "l", "s"],
+    "answer": "ç"
   },
   {
-    "question": "Hangi kelimede 'b' ve 'd' harfleri karıştırılmıştır?",
-    "options": ["dede", "baba", "debde", "bardak"],
-    "answer": "debde"
+    "question": "Hangi kelimedeki harf sayısı diğerlerinden fazladır?",
+    "options": ["fil", "zebra", "aslan", "kaplumbağa"],
+    "answer": "kaplumbağa"
   },
   {
-    "question": "A, B, C, ... harflerini sıraladığımızda hangisi daha önce gelir?",
-    "options": ["G", "H", "F", "Ç"],
-    "answer": "Ç"
+    "question": "10 sayısından 3 çıkarırsak kaç kalır?",
+    "options": ["6", "7", "8", "9"],
+    "answer": "7"
   },
   {
-    "question": "Hangisi bir sayı olan 'altı' kelimesidir?",
-    "options": ["atlı", "altı", "atıl", "alıt"],
-    "answer": "altı"
+    "question": "Hangi kelime 'duvar' ile kafiyelidir?",
+    "options": ["çınar", "masa", "halı", "kapı"],
+    "answer": "çınar"
   },
   {
-    "question": "'koş' kelimesine benziyor ama bir hayvan, hangisi?",
-    "options": ["taş", "kuş", "yaş", "baş"],
-    "answer": "kuş"
+    "question": "Hangi harf 'p' harfinin ayna görüntüsüne benzer?",
+    "options": ["d", "q", "b", "g"],
+    "answer": "q"
+  },
+  {
+    "question": "'ayakkabı' kelimesi kaç hecelidir?",
+    "options": ["3", "4", "5", "6"],
+    "answer": "4"
   },
   {
     "question": "Hangi kelime yanlış yazılmıştır?",
-    "options": ["herkez", "herkes", "okul", "bahçe"],
+    "options": ["herkez", "yalnız", "yanlış", "kirpik"],
     "answer": "herkez"
   },
   {
-    "question": "Hangisi '512' sayısıdır?",
-    "options": ["521", "215", "125", "512"],
-    "answer": "512"
+    "question": "'kapı' kelimesinin başındaki 'k' sesini çıkarırsan ne kalır?",
+    "options": ["apı", "pı", "ka", "ı"],
+    "answer": "apı"
   },
   {
-    "question": "İlkbahar, ..., Sonbahar, Kış. Boşluğa ne gelmelidir?",
-    "options": ["Yaz", "Güz", "Gece", "Gün"],
-    "answer": "Yaz"
+    "question": "Hangisi bir meyve değildir?",
+    "options": ["elma", "armut", "patates", "çilek"],
+    "answer": "patates"
   },
   {
-    "question": "'k' harfi ile başlayıp 'p' harfi ile biten kelime hangisidir?",
-    "options": ["kapak", "köpek", "kitap", "kasa"],
-    "answer": "kitap"
+    "question": "'ev' kelimesinin sonuna 'li' hecesi eklersen ne olur?",
+    "options": ["eliv", "veli", "evli", "liev"],
+    "answer": "evli"
   },
   {
-    "question": "Hangisi '96' sayısıdır?",
-    "options": ["69", "99", "66", "96"],
-    "answer": "96"
+    "question": "Hangisi diğerlerinden farklı bir kategoridedir?",
+    "options": ["kamyon", "gemi", "tren", "eldiven"],
+    "answer": "eldiven"
   },
   {
-    "question": "'yatak' kelimesindeki sesleri tersten söylersek ne olur?",
-    "options": ["katay", "kayat", "tayak", "kayta"],
-    "answer": "katay"
+    "question": "A, B, C, ..., E. Boşluğa ne gelmelidir?",
+    "options": ["Ç", "D", "F", "G"],
+    "answer": "D"
   },
   {
-    "question": "Hangi kelime diğerlerinden daha uzundur?",
-    "options": ["at", "fil", "kelebek", "yılan"],
-    "answer": "kelebek"
+    "question": "'taş' kelimesinin 'ş' sesini 'ç' yaparsan ne olur?",
+    "options": ["taç", "tas", "tat", "tak"],
+    "answer": "taç"
   },
   {
-    "question": "'p' harfi hangi kelimede yoktur?",
-    "options": ["kapı", "top", "para", "baba"],
-    "answer": "baba"
+    "question": "Hangi kelime 'yatak' ile kafiyeli değildir?",
+    "options": ["batak", "çatak", "tabak", "tarak"],
+    "answer": "tarak"
   },
   {
-    "question": "Hangisi 'ile' kelimesinin tersten yazılışıdır?",
-    "options": ["eli", "lei", "iel", "lie"],
-    "answer": "eli"
+    "question": "'kar' kelimesinin tersten okunuşu nedir?",
+    "options": ["rak", "ark", "kra", "akr"],
+    "answer": "rak"
   },
   {
-    "question": "'araba' kelimesinde hangi sesli harf yoktur?",
-    "options": ["a", "ı", "e", "o"],
-    "answer": "o"
+    "question": "2, 4, 6, ?, 10. Dizideki eksik sayı nedir?",
+    "options": ["7", "8", "9", "5"],
+    "answer": "8"
   },
   {
-    "question": "Hangi kelime doğru yazılmıştır?",
-    "options": ["sipor", "spor", "ispor", "sopr"],
-    "answer": "spor"
+    "question": "Hangisi hem 'b' hem de 'd' harfini içerir?",
+    "options": ["defter", "bardak", "perde", "dolap"],
+    "answer": "bardak"
   },
   {
-    "question": "2, 4, 6, 8, ... Sıradaki çift sayı nedir?",
-    "options": ["9", "10", "11", "7"],
-    "answer": "10"
+    "question": "'okul' kelimesinin son sesi nedir?",
+    "options": ["o", "k", "u", "l"],
+    "answer": "l"
   },
   {
-    "question": "'çorap' kelimesine benzeyen ama meyve olan hangisidir?",
-    "options": ["çoban", "şarap", "çınar", "ahbap"],
-    "answer": "şarap"
+    "question": "Hangi kelime yanlış yazılmıştır?",
+    "options": ["çukulata", "domates", "gazete", "makine"],
+    "answer": "çukulata"
   },
   {
-    "question": "Hangi kelimede harf tekrarı vardır?",
-    "options": ["kedi", "yol", "saat", "ip"],
-    "answer": "saat"
+    "question": "Bir haftada kaç gün vardır?",
+    "options": ["5", "6", "7", "8"],
+    "answer": "7"
   },
   {
-    "question": "Hangisi 'zor' kelimesinin zıttıdır?",
-    "options": ["güç", "kolay", "sert", "kötü"],
-    "answer": "kolay"
+    "question": "'gözlük' kelimesini hecelerine ayır.",
+    "options": ["göz-lük", "gö-zlük", "g-özlük", "gözl-ük"],
+    "answer": "göz-lük"
   },
   {
-    "question": "Cümleyi tamamla: 'Dişlerimi ... yatmadan önce fırçalarım.'",
-    "options": ["mutlaka", "matluka", "muklata", "mulkata"],
-    "answer": "mutlaka"
+    "question": "Hangisi bir renk ve bir hayvan adının birleşimidir?",
+    "options": ["karasinek", "bozayı", "akbaba", "hepsi"],
+    "answer": "hepsi"
   },
   {
-    "question": "Hangisi 'kar' kelimesiyle aynı sesle biter?",
-    "options": ["göl", "nar", "su", "dağ"],
-    "answer": "nar"
+    "question": "'saat' kelimesindeki 's' sesini çıkarırsan ne kalır?",
+    "options": ["aat", "at", "sat", "aa"],
+    "answer": "aat"
   },
   {
-    "question": "Hangi kelime 'ş' sesi içerir?",
-    "options": ["yaz", "kış", "bahar", "güz"],
-    "answer": "kış"
+    "question": "Hangisi hem mutfakta hem de banyoda bulunur?",
+    "options": ["sabun", "fırın", "bıçak", "tencere"],
+    "answer": "sabun"
   },
   {
-    "question": "Alfabede 'M' harfinden önce ne gelir?",
-    "options": ["N", "O", "K", "L"],
-    "answer": "L"
+    "question": "Hangi kelime 'çanta' ile kafiyelidir?",
+    "options": ["tahta", "kalem", "silgi", "kitap"],
+    "answer": "tahta"
   },
   {
-    "question": "Hangi kelimenin hece sayısı diğerlerinden farklıdır?",
-    "options": ["araba", "otobüs", "bisiklet", "ev"],
-    "answer": "ev"
+    "question": "'31' sayısındaki rakamların yerini değiştirirsen hangi sayı olur?",
+    "options": ["13", "31", "4", "301"],
+    "answer": "13"
   },
   {
-    "question": "'60 saniye 1 ... eder.' Boşluğa ne gelmelidir?",
-    "options": ["dakika", "saat", "salise", "gün"],
-    "answer": "dakika"
+    "question": "'orman' kelimesinin sesli harfleri nelerdir?",
+    "options": ["o, a", "o, r", "r, m", "m, n"],
+    "answer": "o, a"
   },
   {
-    "question": "Hangisi yön olan bir kelimesidir?",
-    "options": ["doğu", "doğo", "dopu", "boğu"],
-    "answer": "doğu"
+    "question": "Hangi kelime diğerlerinden farklıdır?",
+    "options": ["koşmak", "yürümek", "oturmak", "düşünmek"],
+    "answer": "düşünmek"
   },
   {
-    "question": "'Anne' kelimesinde hangi harf iki kere kullanılmıştır?",
-    "options": ["a", "n", "e", "hiçbiri"],
-    "answer": "n"
+    "question": "'limon' kelimesinin ilk hecesi nedir?",
+    "options": ["li", "lim", "mon", "lo"],
+    "answer": "li"
   },
   {
-    "question": "'kalem' kelimesindeki harflerle hangisi yazılamaz?",
-    "options": ["kel", "kume", "ela", "kem"],
-    "answer": "kume"
+    "question": "Hangi kelime yanlış yazılmıştır?",
+    "options": ["eşortman", "şoför", "aferim", "düğme"],
+    "answer": "eşortman"
+  },
+  {
+    "question": "'kutu' kelimesinin 'k' sesini 't' yaparsan ne olur?",
+    "options": ["tutu", "kuku", "kutu", "tuku"],
+    "answer": "tutu"
+  },
+  {
+    "question": "Hangi hayvanın boynu uzundur?",
+    "options": ["fil", "zürafa", "aslan", "ayı"],
+    "answer": "zürafa"
+  },
+  {
+    "question": "Aşağıdaki kelimelerden hangisi 'm' sesi ile biter?",
+    "options": ["kalem", "defter", "kitap", "masa"],
+    "answer": "kalem"
+  },
+  {
+    "question": "Hangisi hem bir ağaç hem de bir yemiş adıdır?",
+    "options": ["ceviz", "elma", "çınar", "köknar"],
+    "answer": "ceviz"
+  },
+  {
+    "question": "'palto' kelimesi 'pal' hecesini çıkarırsak ne kalır?",
+    "options": ["to", "alto", "lto", "o"],
+    "answer": "to"
   }
 ]

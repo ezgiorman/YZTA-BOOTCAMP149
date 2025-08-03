@@ -11,16 +11,13 @@ import joblib
 
 app = FastAPI()
 
-# Statik dosyalar
+
 app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
 
 
+template_dir = Path(__file__).parent / "frontend"
+templates = Jinja2Templates(directory=str(template_dir))
 
-template_dir = Path(__file__).parent / "frontend" 
-templates = Jinja2Templates(directory=str(template_dir)) 
-
-
-# 🌐 Sayfa Girişleri
 
 @app.get("/", response_class=HTMLResponse)
 async def homepage(request: Request):
@@ -41,7 +38,6 @@ async def task_page(request: Request):
 @app.get("/analyze", response_class=HTMLResponse)
 async def analyze_page(request: Request):
     return templates.TemplateResponse("analyze.html", {"request": request})
-
 
 
 
@@ -106,7 +102,7 @@ async def submit_login(
     })
 
 
-# ✅ Test Sorularını Getir
+
 @app.get("/quiz-questions")
 async def get_quiz_questions():
     questions_file = Path("backend/questions.json")
@@ -142,9 +138,9 @@ async def analyze_task(request: Request):
     risk_score = 0
     if data["reading_time"] > 20: risk_score += 25
     if data["sequencing_difficulty_score"] > 0: risk_score += 30
-    if data["semantic_mistake_count"] > 0: risk_score += 25
+    if data["semantic_mistake_count"] > 0: risk_score += (data["semantic_mistake_count"] * 5)
     if data["wrong_spelling_ratio"] > 0.5: risk_score += 20
-    risk_score = min(risk_score, 100) 
+    risk_score = min(risk_score, 100)
 
     
     return JSONResponse(content={
@@ -152,6 +148,6 @@ async def analyze_task(request: Request):
         "message": "⚠️ Disleksi riski tespit edildi." if prediction == 1 else "✅ Disleksi riski bulunamadı.",
         "risk_score": risk_score,
         "reading_time": data["reading_time"],
-        "sequencing_mistakes": data["sequencing_difficulty_score"],
+        "expected_reading_time": 15,
         "semantic_mistakes": data["semantic_mistake_count"]
     })
