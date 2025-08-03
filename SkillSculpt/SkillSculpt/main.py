@@ -14,8 +14,11 @@ app = FastAPI()
 # Statik dosyalar
 app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
 
-# HTML şablonları
-templates = Jinja2Templates(directory="frontend")
+
+
+template_dir = Path(__file__).parent / "frontend" 
+templates = Jinja2Templates(directory=str(template_dir)) 
+
 
 # 🌐 Sayfa Girişleri
 
@@ -35,16 +38,12 @@ async def login_page(request: Request):
 async def task_page(request: Request):
     return templates.TemplateResponse("task.html", {"request": request})
 
-@app.get("/submit", response_class=HTMLResponse)
-async def submit_page(request: Request):
-    return templates.TemplateResponse("submit.html", {"request": request})
-
 @app.get("/analyze", response_class=HTMLResponse)
 async def analyze_page(request: Request):
     return templates.TemplateResponse("analyze.html", {"request": request})
 
 
-# ✅ Kullanıcı İşlemleri
+
 
 @app.post("/submit-registration")
 async def submit_registration(
@@ -121,14 +120,14 @@ async def get_quiz_questions():
     return random.sample(all_questions, min(10, len(all_questions)))
 
 
-# ✅ Disleksi Modeli ve Tahmin
+
 model = joblib.load("backend/disleksi_model.pkl")
 
 @app.post("/analyze-task")
 async def analyze_task(request: Request):
     data = await request.json()
 
-    features = np.array([[ 
+    features = np.array([[
         data["age"],
         data["reading_time"],
         data["sequencing_difficulty_score"],
@@ -139,8 +138,20 @@ async def analyze_task(request: Request):
     ]])
 
     prediction = model.predict(features)[0]
+    
+    risk_score = 0
+    if data["reading_time"] > 20: risk_score += 25
+    if data["sequencing_difficulty_score"] > 0: risk_score += 30
+    if data["semantic_mistake_count"] > 0: risk_score += 25
+    if data["wrong_spelling_ratio"] > 0.5: risk_score += 20
+    risk_score = min(risk_score, 100) 
 
+    
     return JSONResponse(content={
         "prediction": int(prediction),
-        "message": "⚠️ Disleksi riski tespit edildi." if prediction == 1 else "✅ Disleksi riski bulunamadı."
+        "message": "⚠️ Disleksi riski tespit edildi." if prediction == 1 else "✅ Disleksi riski bulunamadı.",
+        "risk_score": risk_score,
+        "reading_time": data["reading_time"],
+        "sequencing_mistakes": data["sequencing_difficulty_score"],
+        "semantic_mistakes": data["semantic_mistake_count"]
     })

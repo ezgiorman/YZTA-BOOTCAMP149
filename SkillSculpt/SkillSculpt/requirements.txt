@@ -1,2 +1,9 @@
 fastapi
 uvicorn
+python-multipart
+jinja2
+passlib
+bcrypt
+numpy
+scikit-learn
+joblibcd

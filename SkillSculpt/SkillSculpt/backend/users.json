@@ -12,5 +12,12 @@
     "password": "$2b$12$E9mUG5JFqPpooFpPXFrT2eALVsUWmqBGgZvrVa2LK3/aVx67aeUT6",
     "age": 12,
     "gender": "male"
+  },
+  {
+    "name": "nilsu özgen",
+    "email": "nilsuozgen@gmail.com",
+    "password": "$2b$12$Y3CQdasE/1.kDuioBWdDqe618uY.WPfu4nrwBN6.7xeDQhiGyeujO",
+    "age": 10,
+    "gender": "female"
   }
 ]

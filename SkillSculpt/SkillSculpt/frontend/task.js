@@ -1,72 +1,114 @@
-let startTime = performance.now();
-let readingStartTime = null;
-let readingEndTime = null;
+const pageStartTime = performance.now();
+let readingStartTime = 0;
+let readingEndTime = 0;
+let timerInterval = null;
+let quizQuestions = [];
 
-// Okuma paragrafı tamamlandığında zamanı kaydet
-function endReading() {
-  readingEndTime = performance.now();
-  alert("📘 Okuma tamamlandı!");
+const timerDisplay = document.getElementById('timer-display');
+const startBtn = document.getElementById('start-reading-btn');
+const endBtn = document.getElementById('end-reading-btn');
+
+function startReading() {
+  clearInterval(timerInterval);
+  readingStartTime = performance.now();
+  startBtn.style.display = 'none';
+  endBtn.style.display = 'block';
+
+  let seconds = 0;
+  timerDisplay.textContent = `${seconds}s`;
+  timerInterval = setInterval(() => {
+    seconds++;
+    timerDisplay.textContent = `${seconds}s`;
+  }, 1000);
 }
 
-// ✅ Test sorularını yükle
+function endReading() {
+  readingEndTime = performance.now();
+  clearInterval(timerInterval);
+  endBtn.style.display = 'none';
+  startBtn.style.display = 'block';
+}
+
+
 function loadQuiz() {
   fetch("/quiz-questions")
     .then((res) => res.json())
     .then((questions) => {
+      quizQuestions = questions; 
       const container = document.getElementById("quiz-container");
-      container.innerHTML = "";
-      questions.forEach((q, i) => {
-        const qDiv = document.createElement("div");
-        qDiv.innerHTML = `
-          <p><strong>${i + 1}. ${q.question}</strong></p>
-          ${q.options.map((opt) => `
-            <label>
-              <input type="radio" name="question${i}" value="${opt}"> ${opt}
-            </label><br>
-          `).join("")}
-        `;
-        container.appendChild(qDiv);
-      });
+      container.innerHTML = ""; 
+      questions.forEach((q, index) => {
+        const questionDiv = document.createElement("div");
+        questionDiv.classList.add("quiz-question");
+        
+        let optionsHTML = q.options.map(opt => `
+          <label>
+            <input type="radio" name="question${index}" value="${opt}" required> ${opt}
+          </label>
+        `).join('<br>');
 
-      document.getElementById("quiz-section").style.display = "block";
+        questionDiv.innerHTML = `
+          <p>${index + 1}. ${q.question}</p>
+          <div class="options">${optionsHTML}</div>
+        `;
+        container.appendChild(questionDiv);
+      });
     })
     .catch((err) => {
       console.error("Quiz yüklenemedi:", err);
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "<p>Test soruları yüklenirken bir hata oluştu.</p>";
     });
 }
 
-// Test cevaplarını gönder (örnek)
-function submitQuiz() {
-  alert("✅ Test cevapları gönderildi. (Analize dahil edilebilir.)");
-}
 
-// ✅ Form gönderildiğinde görev verilerini topla ve gönder
+document.addEventListener("DOMContentLoaded", loadQuiz);
+
+
 document.getElementById("taskForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const endTime = performance.now();
-  const formData = new FormData(e.target);
+  if (readingStartTime === 0 || readingEndTime === 0) {
+    alert("Lütfen okuma görevini başlatıp bitirin.");
+    return;
+  }
 
-  const taskCompletionTime = Math.round((endTime - startTime) / 1000);
-  const readingTime = readingEndTime ? Math.round((readingEndTime - startTime) / 1000) : 0;
+  const formData = new FormData(e.target);
+  const formEndTime = performance.now();
+  
+  const taskCompletionTime = Math.round((formEndTime - pageStartTime) / 1000);
+  const readingTime = Math.round((readingEndTime - readingStartTime) / 1000);
+
+  const correctOrder = "A,D,K,L,R";
+  const userAnswerOrder = (formData.get("letter_order") || "").replace(/[\s,.-]/g, "").toUpperCase();
+  const sequencingMistake = userAnswerOrder === correctOrder ? 0 : 1;
+
+
+  let totalSemanticMistakes = 0;
+  if (formData.get("quiz_answer") !== "24") {
+    totalSemanticMistakes++;
+  }
+  quizQuestions.forEach((q, index) => {
+    const userAnswer = formData.get(`question${index}`);
+    if (userAnswer !== q.answer) {
+      totalSemanticMistakes++;
+    }
+  });
 
   const spellingText = formData.get("spelling_test") || "";
-  const blankRatio = [...formData.values()].filter(v => !v.trim()).length / 5;
-
+  const blankRatio = [...formData.values()].filter(v => !v.trim()).length / (5 + quizQuestions.length);
   const spellingMistakes = (spellingText.match(/(?:gelecek|okul|arkadaşlık)/gi) || []).length;
   const wrongSpellingRatio = spellingText.length ? 1 - (spellingMistakes / 3) : 1;
 
   const result = {
-    age: 10,  // Sabit yaş (gelişmiş sürümde kullanıcıdan alınabilir)
+    age: 10,
     reading_time: readingTime,
-    sequencing_difficulty_score: formData.get("letter_order") ? 0 : 1,
+    sequencing_difficulty_score: sequencingMistake,
     task_completion_time: taskCompletionTime,
     blank_answer_ratio: blankRatio,
-    semantic_mistake_count: formData.get("quiz_answer") === "24" ? 0 : 1,
-    wrong_spelling_ratio: wrongSpellingRatio
+    semantic_mistake_count: totalSemanticMistakes,
+    wrong_spelling_ratio: wrongSpellingRatio,
   };
-
-  console.log("📦 Model verileri:", result);
 
   try {
     const response = await fetch("/analyze-task", {
@@ -75,16 +117,15 @@ document.getElementById("taskForm").addEventListener("submit", async (e) => {
       body: JSON.stringify(result)
     });
 
-    if (!response.ok) {
-      alert("⚠️ Sunucu hatası oluştu.");
-      return;
+    if (response.ok) {
+      const data = await response.json();
+      sessionStorage.setItem('analysisResult', JSON.stringify(data));
+      window.location.href = '/analyze';
+    } else {
+      alert("Sunucu hatası oluştu.");
     }
-
-    const data = await response.json();
-    alert(`📊 Tahmin Sonucu: ${data.message}`);
-
   } catch (error) {
-    console.error("Gönderim hatası:", error);
-    alert("⚠️ Veri gönderilemedi.");
+    console.error("Hata:", error);
+    alert("Veri gönderilemedi.");
   }
 });

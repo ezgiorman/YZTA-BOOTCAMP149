@@ -4,76 +4,46 @@
   <meta charset="UTF-8" />
   <title>🧠 Görev Çözme | SkillSculpt</title>
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-  <script defer src="/frontend/task.js"></script>
   <style>
-    body {
-      font-family: 'Varela Round', sans-serif;
-      background: linear-gradient(to right, #2980b9, #6dd5fa);
-      color: #333;
-      padding: 30px;
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    .task-box {
-      background-color: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-    label, p {
-      font-weight: bold;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      margin-top: 8px;
-    }
-    button {
-      padding: 12px 25px;
-      background-color: #002244;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-weight: bold;
-      cursor: pointer;
-      display: block;
-      margin: 0 auto;
-    }
+    body { font-family: 'Varela Round', sans-serif; background: linear-gradient(to right, #2980b9, #6dd5fa); color: #333; padding: 30px; }
+    h1, h2 { text-align: center; }
+    .task-box { background-color: #fff; border-radius: 12px; padding: 20px; margin-bottom: 30px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+    label, p { font-weight: bold; }
+    input, textarea, select { width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; margin-top: 8px; }
+    button { padding: 12px 25px; background-color: #002244; color: white; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; display: block; margin: 10px auto; }
+    .timer-buttons { display: flex; justify-content: center; gap: 15px; margin-top: 15px; align-items: center; }
+    .timer-buttons button { background-color: #4CAF50; }
+    .timer-buttons button#end-reading-btn { background-color: #f44336; display: none; }
+    #timer-display { font-size: 1.5rem; font-weight: bold; color: #002244; min-width: 40px; text-align: center; }
+    .quiz-question { margin-bottom: 15px; }
+    .quiz-question .options label { font-weight: normal; }
   </style>
 </head>
 <body>
   <h1>📚 SkillSculpt Görevleri</h1>
-
   <form id="taskForm">
-    <!-- ✅ Okuma Paragrafı -->
     <div class="task-box">
       <h2>📖 Okuma Paragrafı</h2>
-      <p>Aşağıdaki paragrafı okuyup bitirdiğinizde "Bitti" butonuna basın:</p>
+      <p>Aşağıdaki paragrafı okumak için "Başla" butonuna basın. Bitirdiğinizde "Bitirdim" butonuna basın:</p>
       <div id="reading-paragraph">
         Bilim, insanlığın bilgiye ulaşma yolculuğunda temel bir araçtır. Gözlem, deney ve akıl yürütme ile dünyayı anlama çabasını temsil eder.
       </div>
-      <button type="button" onclick="endReading()">📘 Bitti</button>
+      <div class="timer-buttons">
+        <span id="timer-display">0s</span>
+        <button type="button" id="start-reading-btn">▶️ Okumaya Başla</button>
+        <button type="button" id="end-reading-btn">⏹️ Okumayı Bitirdim</button>
+      </div>
     </div>
-
-    <!-- ✅ Harf Sıralama -->
     <div class="task-box">
       <h2>🔤 Harf Sıralama</h2>
       <label>Bu harfleri alfabetik sıraya koyun: R, A, L, K, D</label>
       <input type="text" name="letter_order" placeholder="Örn: A, D, K, L, R" required>
     </div>
-
-    <!-- ✅ Cümle Kurma -->
     <div class="task-box">
       <h2>✍️ Cümle Kurma</h2>
       <label>Kelime grubu: kitap - Ali - okuyor</label>
       <input type="text" name="sentence" placeholder="Cümleyi yazın" required>
     </div>
-
-    <!-- ✅ Anlam Sorusu -->
     <div class="task-box">
       <h2>❓ Anlam Sorusu</h2>
       <label>Soru: Dünya kendi etrafında kaç saatte döner?</label>
@@ -84,69 +54,142 @@
         <option value="48">48 saat</option>
       </select>
     </div>
-
-    <!-- ✅ Yazım Testi -->
+    <div class="task-box">
+      <h2>🧠 Test Soruları</h2>
+      <div id="quiz-container">
+        <p>Sorular yükleniyor...</p>
+      </div>
+    </div>
     <div class="task-box">
       <h2>📝 Yazım Testi</h2>
       <label>"gelecek", "okul", "arkadaşlık" kelimelerini içeren bir paragraf yazın:</label>
       <textarea name="spelling_test" rows="5" required></textarea>
     </div>
-
-    <!-- ✅ Gönder Butonu -->
     <button type="submit">✅ Görevleri Tamamla</button>
   </form>
 
   <script>
-    let startTime = performance.now();
-    let readingEndTime = null;
+    document.addEventListener("DOMContentLoaded", () => {
+      const pageStartTime = performance.now();
+      let readingStartTime = 0;
+      let readingEndTime = 0;
+      let timerInterval = null;
+      let quizQuestions = [];
 
-    function endReading() {
-      readingEndTime = performance.now();
-      alert("✅ Okuma tamamlandı!");
-    }
+      const timerDisplay = document.getElementById('timer-display');
+      const startBtn = document.getElementById('start-reading-btn');
+      const endBtn = document.getElementById('end-reading-btn');
+      const taskForm = document.getElementById('taskForm');
+      const quizContainer = document.getElementById('quiz-container');
 
-    // Form gönderimi
-    document.getElementById("taskForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
+      function startReading() {
+        clearInterval(timerInterval);
+        readingStartTime = performance.now();
+        startBtn.style.display = 'none';
+        endBtn.style.display = 'block';
+        let seconds = 0;
+        timerDisplay.textContent = `${seconds}s`;
+        timerInterval = setInterval(() => {
+          seconds++;
+          timerDisplay.textContent = `${seconds}s`;
+        }, 1000);
+      }
 
-      const formData = new FormData(e.target);
-      const endTime = performance.now();
-      const taskCompletionTime = Math.round((endTime - startTime) / 1000);
-      const readingTime = readingEndTime ? Math.round((readingEndTime - startTime) / 1000) : 0;
+      function endReading() {
+        readingEndTime = performance.now();
+        clearInterval(timerInterval);
+        endBtn.style.display = 'none';
+        startBtn.style.display = 'block';
+      }
 
-      const spellingText = formData.get("spelling_test") || "";
-      const blankRatio = [...formData.values()].filter(v => !v.trim()).length / 5;
+      function loadQuiz() {
+        fetch("/quiz-questions")
+          .then(res => res.json())
+          .then(questions => {
+            quizQuestions = questions;
+            quizContainer.innerHTML = "";
+            questions.forEach((q, index) => {
+              const questionDiv = document.createElement("div");
+              questionDiv.classList.add("quiz-question");
+              let optionsHTML = q.options.map(opt =>
+                `<label><input type="radio" name="question${index}" value="${opt}" required> ${opt}</label>`
+              ).join('<br>');
+              questionDiv.innerHTML = `<p>${index + 1}. ${q.question}</p><div class="options">${optionsHTML}</div>`;
+              quizContainer.appendChild(questionDiv);
+            });
+          })
+          .catch(err => {
+            console.error("Quiz yüklenemedi:", err);
+            quizContainer.innerHTML = "<p>Test soruları yüklenirken bir hata oluştu.</p>";
+          });
+      }
+      
+      startBtn.addEventListener('click', startReading);
+      endBtn.addEventListener('click', endReading);
 
-      const spellingMistakes = (spellingText.match(/(?:gelecek|okul|arkadaşlık)/gi) || []).length;
-      const wrongSpellingRatio = spellingText.length ? 1 - (spellingMistakes / 3) : 1;
+      taskForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (readingStartTime === 0 || readingEndTime === 0) {
+          alert("Lütfen okuma görevini başlatıp bitirin.");
+          return;
+        }
 
-      const result = {
-        age: 10,
-        reading_time: readingTime,
-        sequencing_difficulty_score: formData.get("letter_order") ? 0 : 1,
-        task_completion_time: taskCompletionTime,
-        blank_answer_ratio: blankRatio,
-        semantic_mistake_count: formData.get("quiz_answer") === "24" ? 0 : 1,
-        wrong_spelling_ratio: wrongSpellingRatio,
-      };
-
-      try {
-        const response = await fetch("/analyze-task", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(result)
+        const formData = new FormData(taskForm);
+        const formEndTime = performance.now();
+        const taskCompletionTime = Math.round((formEndTime - pageStartTime) / 1000);
+        const readingTime = Math.round((readingEndTime - readingStartTime) / 1000);
+        
+        
+        const correctOrder = "ADKLR"; 
+        const userAnswerOrder = (formData.get("letter_order") || "").replace(/[\s,.-]/g, "").toUpperCase();
+        const sequencingMistake = userAnswerOrder === correctOrder ? 0 : 1;
+        
+        
+        let totalSemanticMistakes = 0;
+        if (formData.get("quiz_answer") !== "24") {
+            totalSemanticMistakes++;
+        }
+        quizQuestions.forEach((q, index) => {
+            if (formData.get(`question${index}`) !== q.answer) {
+                totalSemanticMistakes++;
+            }
         });
 
-        if (response.ok) {
-          const data = await response.json();
-          alert(data.message);  // ✅ Kullanıcıya sonucu göster
-        } else {
-          alert("Sunucu hatası oluştu.");
+        const spellingText = formData.get("spelling_test") || "";
+        const blankRatio = [...formData.values()].filter(v => !v.trim()).length / (5 + quizQuestions.length);
+        const spellingMistakes = (spellingText.match(/(?:gelecek|okul|arkadaşlık)/gi) || []).length;
+        const wrongSpellingRatio = spellingText.length ? 1 - (spellingMistakes / 3) : 1;
+
+        const result = {
+          age: 10,
+          reading_time: readingTime,
+          sequencing_difficulty_score: sequencingMistake,
+          task_completion_time: taskCompletionTime,
+          blank_answer_ratio: blankRatio,
+          semantic_mistake_count: totalSemanticMistakes,
+          wrong_spelling_ratio: wrongSpellingRatio,
+        };
+
+        try {
+          const response = await fetch("/analyze-task", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(result)
+          });
+          if (response.ok) {
+            const data = await response.json();
+            sessionStorage.setItem('analysisResult', JSON.stringify(data));
+            window.location.href = '/analyze';
+          } else {
+            alert("Sunucu hatası oluştu.");
+          }
+        } catch (error) {
+          console.error("Hata:", error);
+          alert("Veri gönderilemedi.");
         }
-      } catch (error) {
-        console.error("Hata:", error);
-        alert("Veri gönderilemedi.");
-      }
+      });
+      
+      loadQuiz();
     });
   </script>
 </body>
